@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import injectSheet, {ThemeProvider} from 'react-jss'
 import {Grid, Icon} from 'semantic-ui-react'
+import Desplegable from './Desplegable'
 
 const menuText = [
   {text: 'Institución', color: 'rgb(255, 241, 0)'},
@@ -11,6 +12,26 @@ const menuText = [
   {text: 'Certificados', color: 'rgb(0, 165, 81)'}
 ]
 class Menu extends Component {
+  constructor (args) {
+    super(args)
+    this.state = {
+      show: false,
+      number: 0
+    }
+    this.showMenu = this.showMenu.bind(this)
+    this.hideMenu = this.hideMenu.bind(this)
+  }
+  showMenu (x) {
+    this.setState({
+      show: true,
+      number: x
+    })
+  }
+  hideMenu () {
+    this.setState({
+      show: false
+    })
+  }
   render () {
     const {classes} = this.props
     const items = menuText.map((m, i) => {
@@ -25,7 +46,7 @@ class Menu extends Component {
         fontSize: '14px',
         cursor: 'pointer'
       }
-      return <Grid.Column className={classes.item} key={i} style={itemStyles}>
+      return <Grid.Column onMouseEnter={(e) => { this.showMenu(i) }} className={classes.item} key={i} style={itemStyles}>
         <Grid columns={1}>
           <Grid.Row>
             <Grid.Column>
@@ -49,6 +70,9 @@ class Menu extends Component {
             </Grid.Row>
           </Grid>
         </div>
+        {this.state.show &&
+          <Desplegable number={this.state.number} hideMenu={this.hideMenu} />
+        }
       </div>
     )
   }

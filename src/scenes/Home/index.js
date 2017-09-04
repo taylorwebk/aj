@@ -10,7 +10,8 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <Header />
+        <Header /><br />
+        <br /><br /><br /><br /><br /><br />
         <Slider /><br /><br />
         <Notas /><br /><br />
         <Servicios /><br /><br /><br /><br />
