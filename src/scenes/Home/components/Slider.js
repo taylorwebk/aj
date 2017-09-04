@@ -32,10 +32,8 @@ class Slider extends Component {
       <div style={styles.slider}>
         <Progress warning percent={this.state.percent} attached='top' />
         <ReactSwipe swipeOptions={{auto: 3000, continous: true}}>
-          <Image src={require('./../../../img/slider/slider1.jpg')} fluid />
-          <Image src={require('./../../../img/slider/slider2.jpg')} fluid />
-          <Image src={require('./../../../img/slider/slider3.jpg')} fluid />
-          <Image src={require('./../../../img/slider/slider4.jpg')} fluid />
+          <Image src={require('./../../../img/slider/slider1.png')} fluid />
+          <Image src={require('./../../../img/slider/slider2.png')} fluid />
         </ReactSwipe>
       </div>
     )

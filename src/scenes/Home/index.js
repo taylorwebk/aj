@@ -6,14 +6,36 @@ import Notas from './components/Notas'
 import Enlaces from './components/Enlaces'
 import Convenios from './components/Convenios'
 import Footer from './components/Footer'
+import ListaServicios from './components/ListaServicios'
 class Home extends Component {
+  constructor (args) {
+    super(args)
+    this.state = {
+      aj: true
+    }
+    this.changeAj = this.changeAj.bind(this)
+  }
+  changeAj () {
+    console.log('cambiooooo')
+    this.setState({
+      aj: !this.state.aj
+    })
+  }
   render () {
+    let contenido
+    if (this.state.aj) {
+      contenido = <div>
+        <Slider /><br /><br />
+        <Servicios changeAj={this.changeAj} /><br /><br />
+        <Notas /><br /><br /><br /><br />
+      </div>
+    } else {
+      contenido = <ListaServicios changeAj={this.changeAj} />
+    }
     return (
       <div>
         <Header />
-        <Slider /><br /><br />
-        <Notas /><br /><br />
-        <Servicios /><br /><br /><br /><br />
+        {contenido}
         <Enlaces /><br /><br />
         <Convenios /><br /><br />
         <Footer />

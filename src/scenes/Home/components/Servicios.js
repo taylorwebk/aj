@@ -68,7 +68,7 @@ class Servicios extends Component {
     const {classes} = this.props
     var content = contenido.map((c, i) => {
       let fila = c.content.map((item, j) => (
-        <Grid.Column key={j}>
+        <Grid.Column key={j} onClick={this.props.changeAj}>
           <Grid columns={1} className={classes.link}>
             <Grid.Row>
               <Grid.Column>
@@ -115,8 +115,10 @@ const styles = (theme) => {
   })
 }
 let Export = injectSheet(styles)(Servicios)
-export default () => (
-  <ThemeProvider theme={{}}>
-    <Export />
-  </ThemeProvider>
-)
+export default (props) => {
+  return (
+    <ThemeProvider theme={{}}>
+      <Export changeAj={props.changeAj} />
+    </ThemeProvider>
+  )
+}

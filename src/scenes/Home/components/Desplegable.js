@@ -61,6 +61,7 @@ const desplegableStyles = {
   width: '100%',
   backgroundColor: 'white',
   fontFamily: 'tahoma',
-  borderRadius: '15px'
+  borderRadius: '15px',
+  boxShadow: '6px 6px 15px #666'
 }
 export default Desplegable
