@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Container, Header, Image, List} from 'semantic-ui-react'
+import {Container, Header, Image, List, Grid} from 'semantic-ui-react'
 
 const enlaces = [
   {
@@ -32,22 +32,42 @@ class Desplegable extends Component {
     const enlace = enlaces[this.props.number]
     let content = enlace.enlaces.map((e, i) => (
       <List.Item key={i}>
-        <Header as='h4'>
+        <Header as='h3'>
           <Header.Content>
             <a href='#'>- {e}</a>
           </Header.Content>
-        </Header>
+        </Header><br />
       </List.Item>
     ))
+    let fila1, fila2, fila3
+    fila1 = <Grid.Column>
+      <List as='ul'>
+        {content.filter((e, i) => i % 3 === 0)}
+      </List>
+    </Grid.Column>
+    fila2 = <Grid.Column>
+      <List as='ul'>
+        {content.filter((e, i) => i % 3 === 1)}
+      </List>
+    </Grid.Column>
+    fila3 = <Grid.Column>
+      <List as='ul'>
+        {content.filter((e, i) => i % 3 === 2)}
+      </List>
+    </Grid.Column>
     return (
       <Container onMouseLeave={this.props.hideMenu} style={desplegableStyles} textAlign='left'>
         <Header as='h2' textAlign='left'>
           {' '}{enlace.title}{' '}
           <Image shape='circular' src={require('./../../../img/iconos/1234.png')} />
         </Header>
-        <List as='ul'>
-          {content}
-        </List>
+        <Grid columns={3}>
+          <Grid.Row>
+            {fila1}
+            {fila2}
+            {fila3}
+          </Grid.Row>
+        </Grid>
       </Container>
     )
   }
