@@ -7,6 +7,7 @@ import Enlaces from './components/Enlaces'
 import Convenios from './components/Convenios'
 import Footer from './components/Footer'
 import ListaServicios from './components/ListaServicios'
+import Fijo from './components/Fijo'
 class Home extends Component {
   constructor (args) {
     super(args)
@@ -35,6 +36,7 @@ class Home extends Component {
     return (
       <div>
         <Header />
+        <Fijo />
         {contenido}
         <Enlaces /><br /><br />
         <Convenios /><br /><br />
