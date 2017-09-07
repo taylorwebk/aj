@@ -6,7 +6,7 @@ class AccesosDirectos extends Component {
     const {classes} = this.props
     return (
       <Container>
-        <Grid columns={4}>
+        <Grid columns={4} stackable>
           <Grid.Row>
             <Grid.Column verticalAlign='top' className={classes.link}>
               <Header icon textAlign='center'>
@@ -27,8 +27,8 @@ class AccesosDirectos extends Component {
             <Grid.Column verticalAlign='top' className={classes.link}>
               <Header icon textAlign='center'>
                 <Image src={require('./../../../img/logos/17.png')} size='tiny' />
-                <p className={classes.text}>
-                  <br />Promociones Empresariales Autorizadas
+                <p style={{transform: 'translateY(12px)'}} className={classes.text}>
+                  <br />Promociones Empresariales
                 </p>
               </Header>
             </Grid.Column>
@@ -55,6 +55,7 @@ const styles = theme => ({
     cursor: 'pointer'
   },
   link: {
+    cursor: 'pointer',
     transition: 'all 0.4s',
     '&:hover': {
       transform: 'scaleX(1.1)',

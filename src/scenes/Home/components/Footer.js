@@ -18,7 +18,7 @@ let styles = {
 class Footer extends Component {
   render () {
     return (
-      <Grid style={styles.container} celled='internally'>
+      <Grid style={styles.container} celled='internally' stackable>
         <Grid.Row columns={5} textAlign='center' verticalAlign='middle'>
           <Grid.Column className='footerbar' width={4} style={styles.dir}>
             <p>© 2015 - Autoridad de Fiscalización del Juego</p>

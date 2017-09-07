@@ -36,14 +36,14 @@ class Enlaces extends Component {
           </p>
         </Grid.Column>
       })
-      return <Grid.Row key={i} columns={4} divided verticalAlign='middle'>
+      return <Grid.Row key={i} columns={4} verticalAlign='middle'>
         {fila}
       </Grid.Row>
     })
     return (
       <Container textAlign='center'>
-        <Header textAlign='left' as='h1' size='huge' dividing>ENLACES</Header>
-        <Grid divided='vertically' textAlign='center'>
+        <Header style={{transform: 'translateX(-90px)'}} textAlign='left' as='h1' size='huge' dividing>ENLACES</Header>
+        <Grid textAlign='center' stackable celled='internally'>
           {content}
         </Grid>
       </Container>

@@ -77,8 +77,8 @@ class Servicios extends Component {
     })
     return (
       <Container textAlign='center'>
-        <Header textAlign='left' as='h1' size='huge' dividing>SERVICIOS AJ</Header>
-        <Grid textAlign='center' divided='vertically' verticalAlign='bottom'>
+        <Header style={{transform: 'translateX(-90px)'}} textAlign='left' as='h1' size='huge' dividing>SERVICIOS AJ</Header>
+        <Grid textAlign='center' divided='vertically' verticalAlign='top' stackable>
           {content}
         </Grid>
       </Container>

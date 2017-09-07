@@ -8,7 +8,7 @@ class Convenios extends Component {
     return (
       <div className={classes.container}>
         <Header textAlign='left' as='h1' size='huge' dividing>CONVENIOS INSTITUCIONALES</Header>
-        <Grid divided='vertically' textAlign='center'>
+        <Grid divided='vertically' textAlign='center' stackable>
           <Grid.Row columns={4} divided>
             <Grid.Column className={classes.convenio}>
               <Image

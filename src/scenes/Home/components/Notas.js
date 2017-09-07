@@ -37,7 +37,7 @@ class Notas extends Component {
     let content = contenido.map((c, i) => {
       let fila = c.content.map((item, j) => (
         <Grid.Column key={j}>
-          <Grid className={classes.nota}>
+          <Grid className={classes.nota} stackable>
             <Grid.Row columns={2}>
               <Grid.Column width={7} style={{overflow: 'hidden'}}>
                 <Image className={classes.notaimg} src={item.img} fluid />
@@ -68,7 +68,7 @@ class Notas extends Component {
     return (
       <div className={classes.container}>
         <Header textAlign='left' as='h1' size='huge' dividing>NOTAS DE PRENSA</Header>
-        <Grid divided='vertically' textAlign='center'>
+        <Grid divided='vertically' textAlign='center' stackable>
           {content}
         </Grid>
       </div>
