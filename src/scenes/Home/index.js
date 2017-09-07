@@ -8,6 +8,7 @@ import Convenios from './components/Convenios'
 import Footer from './components/Footer'
 import ListaServicios from './components/ListaServicios'
 import Fijo from './components/Fijo'
+import AccesosDirectos from './components/AccesosDirectos'
 class Home extends Component {
   constructor (args) {
     super(args)
@@ -26,9 +27,11 @@ class Home extends Component {
     let contenido
     if (this.state.aj) {
       contenido = <div>
-        <Slider /><br /><br />
+        <Slider />
+        <br /><br />
+        <AccesosDirectos /><br />
+        <Notas /><br /><br />
         <Servicios changeAj={this.changeAj} /><br /><br />
-        <Notas /><br /><br /><br /><br />
       </div>
     } else {
       contenido = <ListaServicios changeAj={this.changeAj} />
@@ -38,7 +41,8 @@ class Home extends Component {
         <Header />
         <Fijo />
         {contenido}
-        <Enlaces /><br /><br />
+        <br />
+        <Enlaces /><br /><br /><br />
         <Convenios /><br /><br />
         <Footer />
       </div>

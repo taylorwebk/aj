@@ -5,48 +5,8 @@ const contenido = [
   {
     content: [
       {
-        texto: 'Plataforma AJ en línea',
-        img: require('./../../../img/iconos/1.png')
-      },
-      {
-        texto: 'Promociones empresariales autorizadas. Consulta: Vigencia y condiciones',
-        img: require('./../../../img/iconos/2.png')
-      },
-      {
         texto: 'Vídeo tutoriales Plataforma AJ en línea',
         img: require('./../../../img/iconos/3.png')
-      },
-      {
-        texto: 'Cierres de publicidad para promociones empresariales',
-        img: require('./../../../img/iconos/4.png')
-      }
-    ]
-  },
-  {
-    content: [
-      {
-        texto: 'Recepción de información. Operadores',
-        img: require('./../../../img/iconos/5.png')
-      },
-      {
-        texto: 'Percepción de satisfacción del cliente de la AJ',
-        img: require('./../../../img/iconos/6.png')
-      },
-      {
-        texto: 'Servicio al administrado',
-        img: require('./../../../img/iconos/7.png')
-      },
-      {
-        texto: 'Procedente administrativo',
-        img: require('./../../../img/iconos/8.png')
-      }
-    ]
-  },
-  {
-    content: [
-      {
-        texto: 'Consultas, reclamos y denuncias',
-        img: require('./../../../img/iconos/9.png')
       },
       {
         texto: 'Fiscalizadores',
@@ -55,6 +15,34 @@ const contenido = [
       {
         texto: 'Solicitud de información',
         img: require('./../../../img/iconos/11.png')
+      }
+    ]
+  },
+  {
+    content: [
+      {
+        texto: 'Cierres de publicidad para promociones empresariales',
+        img: require('./../../../img/iconos/4.png')
+      },
+      {
+        texto: 'Recepción de información. Operadores',
+        img: require('./../../../img/iconos/5.png')
+      },
+      {
+        texto: 'Percepción de satisfacción del cliente de la AJ',
+        img: require('./../../../img/iconos/6.png')
+      }
+    ]
+  },
+  {
+    content: [
+      {
+        texto: 'Servicio al administrado',
+        img: require('./../../../img/iconos/15.png')
+      },
+      {
+        texto: 'Procedente administrativo',
+        img: require('./../../../img/iconos/13.png')
       },
       {
         texto: 'Preguntas y Sugerencias',
@@ -77,20 +65,20 @@ class Servicios extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>
-                <Image src={item.img} size='mini' centered />
+                <Image src={item.img} size='tiny' centered />
               </Grid.Column>
             </Grid.Row>
           </Grid>
         </Grid.Column>
       ))
-      return <Grid.Row key={i} divided columns={4}>
+      return <Grid.Row key={i} divided columns={3}>
         {fila}
       </Grid.Row>
     })
     return (
       <Container textAlign='center'>
         <Header textAlign='left' as='h1' size='huge' dividing>SERVICIOS AJ</Header>
-        <Grid divided='vertically' verticalAlign='bottom'>
+        <Grid textAlign='center' divided='vertically' verticalAlign='bottom'>
           {content}
         </Grid>
       </Container>

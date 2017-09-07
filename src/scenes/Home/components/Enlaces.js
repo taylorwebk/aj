@@ -13,7 +13,7 @@ const enlaces = [
   },
   {
     content: [
-      {titulo: 'BOLETINES', color: 'rgb(12, 105, 179)'},
+      // {titulo: 'BOLETINES', color: 'rgb(12, 105, 179)'},
       {titulo: 'NOVEDADES', color: 'rgb(11, 187, 239)'},
       {titulo: 'PUBLICACIONES', color: 'rgb(22, 65, 148)'},
       {titulo: 'RECURSOS TECNOLÓGICOS', color: 'rgb(11, 187, 239)'}
