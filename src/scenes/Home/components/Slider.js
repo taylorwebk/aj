@@ -34,6 +34,7 @@ class Slider extends Component {
         <ReactSwipe swipeOptions={{auto: 3000, continous: true}}>
           <Image src={require('./../../../img/slider/slider1.png')} fluid />
           <Image src={require('./../../../img/slider/slider2.png')} fluid />
+          <Image src={require('./../../../img/slider/slider3.png')} fluid />
         </ReactSwipe>
       </div>
     )
